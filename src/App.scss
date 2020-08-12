@@ -1,0 +1,173 @@
+$app-color: #ffffff;
+$HEADER_COLOR: #192a56;
+$content-color: #ffffff;
+$LVL_BTN_BACKGROUND: #f1c40f;
+$LVL_BTN_FONT_COLOR: #FFFFFF;
+$CELL_EVEN: #f1c40f;
+$CELL_ODD: #d35400;
+$MINE_COLOR: #000000;
+$BOX_OPEN_DARK: #f5cd79;
+$BOX_OPEN_LIGHT: #f7d794;
+$GAME_OVER_COLOR: #000000;
+$GAME_OVER_BACKGROUND_COLOR: #2c3e50;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+  background-color: $app-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  min-width: 450px;
+  min-height: 500px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  .content {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    background-color: $content-color;
+    width: 100%;
+    justify-content: center; 
+    height: 100vh;
+  }
+  .header {
+    background-color: $HEADER_COLOR;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    .high__score{
+      display: flex;
+      //direction: rtl;
+    } 
+  }
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 15px;
+  border: none;
+}
+th, td {
+  //border: 1px solid orange;
+  text-align: left;
+  text-align: center;
+  display: block;
+  float: left;
+  border: none;
+}
+
+// LEVEL buttons
+.level__btn__group button {
+  background-color: $LVL_BTN_BACKGROUND;
+  //border: 0px thin transparent;
+  color: $LVL_BTN_FONT_COLOR;
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+}
+
+.cell {
+  min-width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bolder;
+  .even {
+    background-color: $CELL_EVEN;
+  }
+  .odd {
+    background-color: $CELL_ODD;
+  }
+  .open--light {
+      background-color: $BOX_OPEN_LIGHT;
+    }
+   .open--dark {
+      background-color: $BOX_OPEN_DARK;
+  }
+}
+
+.mine{
+  color: $MINE_COLOR;
+}
+
+
+.flex-test {
+  display: flex;
+}
+
+.count__color_1 {
+  color: #009432 
+}
+.count__color_2 {
+  color: #574b90; 
+ }
+ .count__color_3 {
+  color: #c44569; 
+ }
+ .count__color_4 {
+  color: #FFC312;
+ }
+ .count__color_5 {
+  color: #3dc1d3; 
+ }
+ .count__color_6 {
+  color: #f19066; 
+ }
+ .count__color_7 {
+  color: #C4E538;
+ }
+ .count__color_8 {
+  color: #6F1E51; 
+ }
+
+ .game__bar {
+   color: $HEADER_COLOR;
+   background-color: $GAME_OVER_BACKGROUND_COLOR;
+   flex-direction: column;
+   font-weight: bolder;
+   .blink {
+    animation:text 5.2s infinite;
+   }
+   @keyframes text{
+      0%{  color: #FFFFFF}
+      25%{ color: transparent; }
+      50%{ color: #FFFFFF; }
+      75%{ color: transparent;  }
+      100%{ color: #FFFFFF;    }
+    }
+   .options {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 10px;
+   }
+ }
+ 
+ .white {
+   color: #ffffff
+ }

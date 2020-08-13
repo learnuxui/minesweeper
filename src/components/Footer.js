@@ -5,6 +5,7 @@ import { openMines } from "../actions/InitActions";
 import ReactTooltip from "react-tooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo } from "@fortawesome/free-solid-svg-icons";
+import GameOver from "./GameOver";
 
 const propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -36,6 +37,7 @@ class Footer extends React.Component {
                         </ul>
                     </ReactTooltip>
                 </div>
+                <GameOver {...this.props} />
             </div>
         );
     }

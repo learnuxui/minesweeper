@@ -45,9 +45,9 @@ export function openMines() {
         let row, col;
         for (row = 0; row < level; row++) {
             for (col = 0; col < level; col++) {
-                if (grid[row][col].isMine) {
+                //if (grid[row][col].isMine) {
                     grid[row][col].isOpen = true;
-                }
+                //}
             }
         }
         dispatch(setGrid(grid));

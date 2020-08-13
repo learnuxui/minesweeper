@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlag, faSync } from "@fortawesome/free-solid-svg-icons";
-import GameOver from "./GameOver";
 import Level from "./Level";
 import { startOver } from "../actions/GamePlayActions";
 
@@ -25,7 +24,6 @@ class Header extends React.Component {
         const { mineMarked, totalMines, score } = game;
         return (
             <div className="game__bar">
-                <GameOver {...this.props} />
                 <div className="options">
                     <Level {...this.props} />
                     <div className="white"><FontAwesomeIcon icon={faFlag} />&nbsp;&nbsp;{totalMines - mineMarked.length}</div>
